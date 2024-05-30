@@ -1,21 +1,21 @@
 #!/bin/bash
 
-CA_KEY="aconetwork-lab_CA.key"
-CA_CERT="aconetwork-lab_CA.crt"
-CERT_KEY="wazuh-lab.key"
-CERT_CSR="wazuh-lab.csr"
-CERT_CRT="wazuh-lab.crt"
-DOMAIN="wazuh-lab.aconetwork.cl"
+CA_KEY="wuachimingo_CA.key"
+CA_CERT="wuachimingo_.crt"
+CERT_KEY="www-wuachimingo.key"
+CERT_CSR="www-wuachimingo.csr"
+CERT_CRT="www-wuachimingo.crt"
+DOMAIN="www.wuachimingo.cl"
 
 # Function to create a Certificate Authority (CA)
 create_ca() {
-  CA_DOMAIN="wazuh-lab.aconetwork.cl"
+  CA_DOMAIN="www.wuachimingo.cl"
   CA_COUNTRY="CL"
   CA_STATE="Santiago"
-  CA_ORGANIZATION="Aconetwork SPA"
-  CA_ORG_UNIT="Aconetwork"
+  CA_ORGANIZATION="Wuachimingo"
+  CA_ORG_UNIT="Wuachimingo"
   CA_Days=1825
-  CA_CN="aconetwork.cl"
+  CA_CN="wuachimingo.cl"
 
   echo ""
   echo "Creating CA key..."
@@ -31,9 +31,9 @@ create_ca() {
 create_cert() {
   COUNTRY="CL"
   STATE="Santiago"
-  ORGANIZATION="Aconetwork SPA"
-  ORG_UNIT="Aconetwork"
-  CN="aconetwork.cl"
+  ORGANIZATION="Wuachimingo"
+  ORG_UNIT="Wuachimingo"
+  CN="wuachimingo.cl"
 
   echo ""
   echo "Creating key and CSR for $DOMAIN..."
