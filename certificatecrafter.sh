@@ -49,7 +49,7 @@ create_cert() {
   echo "Certificate created: $CERT_KEY, $CERT_CSR, and $CERT_CRT"
 }
 
-sing_cert() {
+sign_cert() {
   echo ""
   echo "Signing certificate with CA..."
   openssl x509 -req -extfile <(printf "subjectAltName=DNS:$DOMAIN") -days 1024 -in $CERT_CSR -CA $CA_CERT -CAkey $CA_KEY -CAcreateserial -out $CERT_CRT -sha256
@@ -57,7 +57,7 @@ sing_cert() {
 
 # Display usage instructions
 usage() {
-  echo "Usage: $0 {create-ca|create-cert|sing-cert|all}"
+  echo "Usage: $0 {create-ca|create-cert|sign-cert|all}"
   exit 1
 }
 
@@ -74,13 +74,13 @@ case "$1" in
   create-cert)
     create_cert
     ;;
-  sing-cert)
-    sing_cert
+  sign-cert)
+    sign_cert
     ;;
     all)
     create_ca
     create_cert
-    sing_cert
+    sign_cert
     ;;
   *)
     usage
