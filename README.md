@@ -1,6 +1,6 @@
 # CertificateCrafter
 
-Este script bash se utiliza para gestionar la creación de una Autoridad de Certificación (CA) y la generación de certificados SSL firmados por esta CA para un dominio.
+Este script simplifica la creación de una Autoridad Certificadora (CA) y la generación de certificados SSL firmados por esta CA para un dominio. Generando certificados autofirmados que serán reconocidos como validos.
 
 ## Archivos Generados
 
@@ -28,12 +28,6 @@ Otorga permisos de ejecución al archivo con el siguiente comando:
 chmod +x cert_manager.sh
 ```
 ### 3. Definir información de los certificados
-
-Edita el archivo cert_manager.sh
-
-# Información del Script de Bash para Certificados SSL/TLS
-
-## Información de la CA (Autoridad Certificadora)
 
 Para definir la información de la CA y certificado, se debe editar el archivo `cert_manager.sh` modificando las secciones "CA Info" y "Cert Info" con los datos del certificado a crear.
 
