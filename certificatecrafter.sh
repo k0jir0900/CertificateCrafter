@@ -2,7 +2,7 @@
 
 ### CA Info
 CA_KEY="wuachimingo_CA.key"
-CA_CERT="wuachimingo_.crt"
+CA_CERT="wuachimingo_CA.crt"
 CA_Days=1825
 CA_DOMAIN="www.wuachimingo.cl"
 CA_COUNTRY="CL"
