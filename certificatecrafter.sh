@@ -4,7 +4,7 @@
 CA_KEY="wuachimingo_CA.key"
 CA_CERT="wuachimingo_CA.crt"
 CA_Days=1825
-CA_DOMAIN="www.wuachimingo.cl"
+CA_DOMAIN="wuachimingo.cl"
 CA_COUNTRY="CL"
 CA_STATE="Santiago"
 CA_ORGANIZATION="Wuachimingo"
@@ -12,9 +12,9 @@ CA_ORG_UNIT="Wuachimingo"
 CA_CN="wuachimingo.cl"
 
 ### Cert Info
-CERT_KEY="www.wuachimingo.key"
-CERT_CSR="www.wuachimingo.csr"
-CERT_CRT="www.wuachimingo.crt"
+CERT_KEY="wuachimingo.key"
+CERT_CSR="wuachimingo.csr"
+CERT_CRT="wuachimingo.crt"
 CERT_Days=365
 DOMAIN="www.wuachimingo.cl"
 COUNTRY="CL"

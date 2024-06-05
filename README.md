@@ -6,9 +6,9 @@ Este script simplifica la creación de una Autoridad Certificadora (CA) y la gen
 
 - `wuachimingo_CA.key`: Clave privada de la CA.
 - `wuachimingo_CA.crt`: Certificado de la CA.
-- `www.wuachimingo.key`: Clave privada para el dominio especificado.
-- `www.wuachimingo.csr`: Solicitud de firma de certificado (CSR) para el dominio especificado.
-- `www.wuachimingo.crt`: Certificado firmado para el dominio especificado.
+- `wuachimingo.key`: Clave privada para el dominio especificado.
+- `wuachimingo.csr`: Solicitud de firma de certificado (CSR) para el dominio especificado.
+- `wuachimingo.crt`: Certificado firmado para el dominio especificado.
 
 ## Requisitos
 
