@@ -1,22 +1,29 @@
 #!/bin/bash
 
+### CA Info
 CA_KEY="wuachimingo_CA.key"
 CA_CERT="wuachimingo_.crt"
-CERT_KEY="www-wuachimingo.key"
-CERT_CSR="www-wuachimingo.csr"
-CERT_CRT="www-wuachimingo.crt"
+CA_DOMAIN="www.wuachimingo.cl"
+CA_COUNTRY="CL"
+CA_STATE="Santiago"
+CA_ORGANIZATION="Wuachimingo"
+CA_ORG_UNIT="Wuachimingo"
+CA_Days=1825
+CA_CN="wuachimingo.cl"
+
+### Cert Info
+CERT_KEY="www.wuachimingo.key"
+CERT_CSR="www.wuachimingo.csr"
+CERT_CRT="www.wuachimingo.crt"
 DOMAIN="www.wuachimingo.cl"
+COUNTRY="CL"
+STATE="Santiago"
+ORGANIZATION="Wuachimingo"
+ORG_UNIT="Wuachimingo"
+CN="wuachimingo.cl"
 
 # Function to create a Certificate Authority (CA)
 create_ca() {
-  CA_DOMAIN="www.wuachimingo.cl"
-  CA_COUNTRY="CL"
-  CA_STATE="Santiago"
-  CA_ORGANIZATION="Wuachimingo"
-  CA_ORG_UNIT="Wuachimingo"
-  CA_Days=1825
-  CA_CN="wuachimingo.cl"
-
   echo ""
   echo "Creating CA key..."
   openssl genrsa -aes256 -out $CA_KEY 2048
@@ -29,12 +36,6 @@ create_ca() {
 
 # Function to create a certificate signed by the CA
 create_cert() {
-  COUNTRY="CL"
-  STATE="Santiago"
-  ORGANIZATION="Wuachimingo"
-  ORG_UNIT="Wuachimingo"
-  CN="wuachimingo.cl"
-
   echo ""
   echo "Creating key and CSR for $DOMAIN..."
   openssl genrsa -out $CERT_KEY 2048
