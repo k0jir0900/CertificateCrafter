@@ -9,7 +9,6 @@ CA_COUNTRY="CL"
 CA_STATE="Santiago"
 CA_ORGANIZATION="Wuachimingo"
 CA_ORG_UNIT="Wuachimingo"
-
 CA_CN="wuachimingo.cl"
 
 ### Cert Info
