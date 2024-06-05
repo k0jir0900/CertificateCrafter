@@ -69,10 +69,10 @@ Para definir la información de la CA y certificado, se debe editar el archivo `
 ### 4. Ejecutar el script
 El script acepta cuatro comandos diferentes:
 
-`create-ca`: Crea una Autoridad de Certificación (CA).
-`create-cert`: Crea una solicitud de firma de certificado (CSR) y una clave privada para el dominio.
-`sign-cert`: Firma el CSR con la CA para generar un certificado.
-`all`: Ejecuta todas las operaciones anteriores en secuencia.
+| `create-ca`    | Crea una Autoridad de Certificación (CA).                  |
+| `create-cert`  | Crea una solicitud de firma de certificado (CSR) y una clave privada para el dominio.                                      |
+| `sign-cert`    | Firma el CSR con la CA para generar un certificado.                         |
+| `all`          | Ejecuta todas las operaciones anteriores en secuencia.                                     |
 
 ## Ejemplos de Uso
 ### Crear una CA:
