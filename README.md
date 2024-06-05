@@ -36,22 +36,22 @@ El script acepta cuatro comandos diferentes:
 `all`: Ejecuta todas las operaciones anteriores en secuencia.
 
 ## Ejemplos de Uso
-# Crear una CA:
+### Crear una CA:
 
 ```bash
 ./cert_manager.sh create-ca
 ```
-# Crear un certificado para un dominio:
+### Crear un certificado para un dominio:
 
 ```bash
 ./cert_manager.sh create-cert
 ```
-# Firmar el certificado con la CA:
+### Firmar el certificado con la CA:
 
 ```bash
 ./cert_manager.sh sign-cert
 ```
-# Ejecutar todas las operaciones:
+### Ejecutar todas las operaciones:
 
 ```bash
 ./cert_manager.sh all
