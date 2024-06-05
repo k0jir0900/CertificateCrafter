@@ -3,18 +3,20 @@
 ### CA Info
 CA_KEY="wuachimingo_CA.key"
 CA_CERT="wuachimingo_.crt"
+CA_Days=1825
 CA_DOMAIN="www.wuachimingo.cl"
 CA_COUNTRY="CL"
 CA_STATE="Santiago"
 CA_ORGANIZATION="Wuachimingo"
 CA_ORG_UNIT="Wuachimingo"
-CA_Days=1825
+
 CA_CN="wuachimingo.cl"
 
 ### Cert Info
 CERT_KEY="www.wuachimingo.key"
 CERT_CSR="www.wuachimingo.csr"
 CERT_CRT="www.wuachimingo.crt"
+CERT_Days=365
 DOMAIN="www.wuachimingo.cl"
 COUNTRY="CL"
 STATE="Santiago"
@@ -29,7 +31,7 @@ create_ca() {
   openssl genrsa -aes256 -out $CA_KEY 2048
   echo ""
   echo "Creating CA certificate..."
-  openssl req -x509 -new -nodes -key $CA_KEY -sha256 -days 1825 -subj "/C=$CA_COUNTRY/ST=$CA_STATE/O=$CA_ORGANIZATION/OU=$CA_ORG_UNIT/CN=$CA_CN" -out $CA_CERT
+  openssl req -x509 -new -nodes -key $CA_KEY -sha256 -days $CA_Days -subj "/C=$CA_COUNTRY/ST=$CA_STATE/O=$CA_ORGANIZATION/OU=$CA_ORG_UNIT/CN=$CA_CN" -out $CA_CERT
 
   echo "CA created: $CA_KEY and $CA_CERT"
 }
@@ -53,7 +55,7 @@ create_cert() {
 sign_cert() {
   echo ""
   echo "Signing certificate with CA..."
-  openssl x509 -req -extfile <(printf "subjectAltName=DNS:$DOMAIN") -days 1024 -in $CERT_CSR -CA $CA_CERT -CAkey $CA_KEY -CAcreateserial -out $CERT_CRT -sha256
+  openssl x509 -req -extfile <(printf "subjectAltName=DNS:$DOMAIN") -days $CERT_Days -in $CERT_CSR -CA $CA_CERT -CAkey $CA_KEY -CAcreateserial -out $CERT_CRT -sha256
 }
 
 # Display usage instructions
