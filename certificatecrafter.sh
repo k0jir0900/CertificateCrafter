@@ -8,7 +8,7 @@ CA_DOMAIN="wuachimingo.cl"
 CA_COUNTRY="CL"
 CA_STATE="Santiago"
 CA_ORGANIZATION="Wuachimingo"
-CA_ORG_UNIT="Wuachimingo"
+CA_ORG_UNIT="TI"
 CA_CN="wuachimingo.cl"
 
 ### Cert Info
@@ -20,7 +20,7 @@ DOMAIN="www.wuachimingo.cl"
 COUNTRY="CL"
 STATE="Santiago"
 ORGANIZATION="Wuachimingo"
-ORG_UNIT="Wuachimingo"
+ORG_UNIT="TI"
 CN="wuachimingo.cl"
 
 # Function to create a Certificate Authority (CA)
