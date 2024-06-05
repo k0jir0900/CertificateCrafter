@@ -26,3 +26,32 @@ Otorga permisos de ejecución al archivo con el siguiente comando:
 
 ```bash
 chmod +x cert_manager.sh
+
+## Ejecutar el script
+El script acepta cuatro comandos diferentes:
+
+create-ca: Crea una Autoridad de Certificación (CA).
+create-cert: Crea una solicitud de firma de certificado (CSR) y una clave privada para el dominio.
+sign-cert: Firma el CSR con la CA para generar un certificado.
+all: Ejecuta todas las operaciones anteriores en secuencia.
+Ejemplos de Uso
+Crear una CA:
+
+bash
+Copiar código
+./cert_manager.sh create-ca
+Crear un certificado para un dominio:
+
+bash
+Copiar código
+./cert_manager.sh create-cert
+Firmar el certificado con la CA:
+
+bash
+Copiar código
+./cert_manager.sh sign-cert
+Ejecutar todas las operaciones:
+
+bash
+Copiar código
+./cert_manager.sh all
